@@ -2,6 +2,9 @@
 % Hausaufgabe 1
 % Stand: 08.12.2025
 
+
+%% empty workspace
+clear; clc; close all;
 %% Define Parameters
 
 %Train Parameter
@@ -18,9 +21,21 @@ gravity = 9.81; % in m/s^2
 
 % Distance
 start_kilometer = 112.130;
-crash_kilometer = 115.713
+crash_kilometer = 115.713;
 total_distance= (crash_kilometer - start_kilometer) * 1000 ; % given distance in m
 
 % Collision Metric
 v_collision_kmh = 37; % in km/h
 v_collision_ms = v_collision_kmh / 3.6; % in m/s
+
+
+%% (a) Z-v-Diagram of the train set
+v_kmh = 0:0.5:120; % in 0.5 km/h increment
+Z_kN  = tractionForceTrainSet(v_kmh);
+
+figure;
+plot(v_kmh, Z_kN, 'LineWidth', 1.5);
+grid on;
+xlabel('v [km/h]');
+ylabel('Zugkraft Lok Z(v) [kN]');
+title('Z-v-Diagramm der Lok');
