@@ -37,5 +37,15 @@ figure;
 plot(v_kmh, Z_kN, 'LineWidth', 1.5);
 grid on;
 xlabel('v [km/h]');
-ylabel('Zugkraft Lok Z(v) [kN]');
-title('Z-v-Diagramm der Lok');
+ylabel('Traction Force Locomotive Z(v) [kN]');
+title('Z-v-Diagram of the Locomotive');
+
+%% (b) Brake Force Diagram of a wagon
+BW_kN = brakeForceWagon(v_kmh);
+
+figure;
+plot(v_kmh, BW_kN, 'LineWidth', 1.5);
+grid on;
+xlabel('v [km/h]');
+ylabel('Wagon Brakeforce B_W(v) [kN]');
+title('Wagon Brakeforce Diagram');
