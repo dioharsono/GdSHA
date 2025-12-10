@@ -23,4 +23,4 @@ total_distance= (crash_kilometer - start_kilometer) * 1000 ; % given distance in
 
 % Collision Metric
 v_collision_kmh = 37; % in km/h
-v_collision_ms = v_collision_kmh / 3.6; % in m/s
+v_collision_ms = v_collision_kmh
